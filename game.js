@@ -767,7 +767,7 @@ function playVideo(scene) {
         `;
   } else if (scene.videoUrl) {
     // 직접 동영상 파일
-    videoPlayer.src = `Relationship_Simulator\\${scene.videoUrl}`;
+    videoPlayer.src = `${scene.videoUrl}`;
     videoPlayer.load();
     videoPlayer.play();
 
