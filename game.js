@@ -225,7 +225,7 @@ const story = [
   {
     type: "video",
     id: "band_performance",
-    videoUrl: "../video/mv.mp4",
+    videoUrl: "./video/mv.mp4",
   },
   {
     type: "dialogue",
