@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>도키도키 미소년 연애 시뮬레이션</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="game-container">
+      <!-- 시작 화면 -->
+      <div class="start-screen" id="startScreen">
+        <h1 class="title-heading">
+          현실에서 백수인 내가 이 세계에선 미소년들에게 사랑받는 여주?!
+        </h1>
+        <p>당신의 이름을 입력하세요</p>
+        <input
+          type="text"
+          class="nickname-input"
+          id="nicknameInput"
+          placeholder="이름 입력"
+          maxlength="10"
+        />
+        <button class="start-button" onclick="startGame()">게임 시작</button>
+      </div>
+      <audio id="bgm" src="bgm/bgm.mp3" loop preload="auto"></audio>
+      <button onclick="toggleBgm()">🔊 BGM</button>
+
+      <!-- 게임 화면 -->
+      <div class="game-screen" id="gameScreen">
+        <div class="character-display" id="characterDisplay">
+          <div class="character-name" id="characterName"></div>
+          <div class="character-image" id="characterImage">🎵</div>
+          <div class="affection-display" id="affectionDisplay"></div>
+        </div>
+        <div class="dialogue-box" id="dialogueBox">
+          <div class="dialogue-text" id="dialogueText"></div>
+          <div class="sound-effect" id="soundEffect"></div>
+          <div class="choices" id="choices"></div>
+        </div>
+      </div>
+
+      <!-- 게임오버 화면 -->
+      <div class="game-over" id="gameOver">
+        <h2>GAME OVER</h2>
+        <p id="gameOverText"></p>
+        <button class="restart-button" onclick="location.reload()">
+          다시 시작
+        </button>
+      </div>
+
+      <!-- 동영상 컨테이너 -->
+      <div class="video-container" id="videoContainer">
+        <div class="video-wrapper">
+          <video id="videoPlayer" class="video-player" controls>
+            <source src="" type="./video/mv.mp4" />
+            브라우저가 비디오를 지원하지 않습니다.
+          </video>
+          <button class="skip-video-btn" onclick="skipVideo()">
+            건너뛰기 →
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="game.js"></script>
+  </body>
+</html>
